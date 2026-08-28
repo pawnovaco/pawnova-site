@@ -1,40 +1,68 @@
 import Link from "next/link";
 import CategoryCard from "../components/CategoryCard";
 
+const categories = [
+  {
+    eyebrow: "For Dogs",
+    title: "Dog Finds",
+    text: "Practical gear and everyday products that make life easier for dogs and their people.",
+    href: "/dog-finds"
+  },
+  {
+    eyebrow: "For Cats",
+    title: "Cat Finds",
+    text: "Smart, simple picks for feeding, play, and comfort — curated for cat households.",
+    href: "/cat-finds"
+  },
+  {
+    eyebrow: "Care",
+    title: "Grooming",
+    text: "Brushes, tools, and routines that keep coats, nails, and skin in good shape.",
+    href: "/grooming"
+  },
+  {
+    eyebrow: "Everyday",
+    title: "Pet Essentials",
+    text: "The unglamorous basics — bowls, mats, storage, travel gear — done right.",
+    href: "/pet-essentials"
+  }
+];
+
 export default function HomePage() {
   return (
     <>
       <section className="hero">
         <div className="container hero-grid">
-          <div className="hero-copy">
-            <span className="eyebrow">SMARTER PET FINDS</span>
-            <h1>Pet finds that make everyday life a little easier.</h1>
+          <div>
+            <span className="eyebrow">Paw Nova</span>
+            <h1>Pet finds worth knowing about.</h1>
             <p className="hero-text">
-              Useful picks for dogs, cats, grooming, cleanup, travel, and the
-              small everyday things pet owners actually care about.
+              We dig through the noise to surface practical, well-reviewed
+              products for dogs, cats, and the people who love them — no
+              clutter, no filler.
             </p>
-
             <div className="hero-actions">
               <Link href="/dog-finds" className="button">
-                Shop Dog Finds
+                Explore Finds
               </Link>
-              <Link href="/cat-finds" className="button button-ghost">
-                Shop Cat Finds
+              <Link href="/about" className="button button-ghost">
+                About Paw Nova
               </Link>
             </div>
-
             <p className="microcopy">
-              Curated recommendations. Clear explanations. No endless scrolling.
+              As an Amazon Associate I earn from qualifying purchases.
             </p>
           </div>
 
           <div className="hero-card">
             <div className="hero-card-orbit orbit-one" />
             <div className="hero-card-orbit orbit-two" />
-            <div className="hero-paw">🐾</div>
+            <span className="hero-paw" aria-hidden="true">
+              🐾
+            </span>
             <div className="hero-card-copy">
-              <span>PAW NOVA PICKS</span>
-              <strong>Useful stuff for pets who run the house.</strong>
+              <span>CURATED PICKS</span>
+              <strong>Everyday products, actually worth buying.</strong>
             </div>
           </div>
         </div>
@@ -44,36 +72,14 @@ export default function HomePage() {
         <div className="container">
           <div className="section-heading">
             <div>
-              <span className="eyebrow">BROWSE BY CATEGORY</span>
-              <h2>Start with what your pet needs.</h2>
+              <span className="eyebrow">Browse</span>
+              <h2>Shop by category</h2>
             </div>
           </div>
-
           <div className="category-grid">
-            <CategoryCard
-              eyebrow="DOGS"
-              title="Dog Finds"
-              text="Everyday products, walk-time upgrades, cleanup helpers, toys, and comfort."
-              href="/dog-finds"
-            />
-            <CategoryCard
-              eyebrow="CATS"
-              title="Cat Finds"
-              text="Smart picks for feeding, play, litter, comfort, and keeping curious cats busy."
-              href="/cat-finds"
-            />
-            <CategoryCard
-              eyebrow="CARE"
-              title="Grooming"
-              text="Brushes, bathing tools, nail care, shedding helpers, and cleanup essentials."
-              href="/grooming"
-            />
-            <CategoryCard
-              eyebrow="EVERYDAY"
-              title="Pet Essentials"
-              text="Useful basics for home, travel, feeding, storage, and everyday pet life."
-              href="/pet-essentials"
-            />
+            {categories.map((c) => (
+              <CategoryCard key={c.href} {...c} />
+            ))}
           </div>
         </div>
       </section>
@@ -81,36 +87,47 @@ export default function HomePage() {
       <section className="section section-dark">
         <div className="container split">
           <div>
-            <span className="eyebrow eyebrow-light">WHY PAW NOVA</span>
-            <h2>Less hype. More useful finds.</h2>
+            <span className="eyebrow eyebrow-light">Why Paw Nova</span>
+            <h2>Finds that actually earn a spot in your home</h2>
           </div>
           <div className="feature-list">
             <div>
-              <strong>Problem-first picks</strong>
-              <p>We start with real pet-owner problems, then look for products that can help.</p>
+              <strong>Hand-picked, not auto-generated</strong>
+              <p>
+                Every product featured is chosen with a real use case in
+                mind — not pulled from a bestseller feed.
+              </p>
             </div>
             <div>
-              <strong>Easy to browse</strong>
-              <p>Short explanations and straightforward categories so you can find what you need quickly.</p>
+              <strong>Focused on everyday problems</strong>
+              <p>
+                We look for things that solve a real routine headache, not
+                just novelty items.
+              </p>
             </div>
             <div>
-              <strong>Built for real life</strong>
-              <p>Home, travel, grooming, cleanup, feeding, and all the little routines in between.</p>
+              <strong>Simple, honest recommendations</strong>
+              <p>
+                No inflated claims — just what a product is good at, and who
+                it's actually for.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       <section className="section">
-        <div className="container cta-panel">
-          <div>
-            <span className="eyebrow">NEW FINDS COMING SOON</span>
-            <h2>Follow Paw Nova for fresh pet finds and quick tips.</h2>
+        <div className="container">
+          <div className="cta-panel">
+            <div>
+              <span className="eyebrow">Get started</span>
+              <h2>Start with today's most useful pet finds</h2>
+            </div>
+            <p>
+              Browse curated picks across dogs, cats, grooming, and everyday
+              essentials.
+            </p>
           </div>
-          <p>
-            Add your Instagram, TikTok, Facebook, and Pinterest links here once
-            you are ready to send traffic from the site back to your social pages.
-          </p>
         </div>
       </section>
     </>

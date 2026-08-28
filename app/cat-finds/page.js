@@ -1,33 +1,46 @@
 import CategoryPage from "../../components/CategoryPage";
 
+export const metadata = { title: "Cat Finds" };
+
 const items = [
   {
-    "title": "Feeding favorites",
-    "text": "Bowls, mats, feeders, fountains, and practical mealtime helpers.",
-    "tag": "Feeding"
+    title: "Covered Litter Box",
+    text: "Helps contain litter tracking while giving shy cats more privacy.",
+    tag: "Litter"
   },
   {
-    "title": "Play & enrichment",
-    "text": "Toys and interactive products that help keep cats active and engaged.",
-    "tag": "Play"
+    title: "Wall-Mounted Perch",
+    text: "Space-saving climbing spot that gives cats a good vantage point.",
+    tag: "Enrichment"
   },
   {
-    "title": "Litter & cleanup",
-    "text": "Products that can make litter areas cleaner and easier to manage.",
-    "tag": "Cleanup"
+    title: "Automatic Feeder",
+    text: "Keeps mealtimes consistent, useful for multi-cat or busy households.",
+    tag: "Feeding"
+  },
+  {
+    title: "Interactive Wand Toy",
+    text: "Encourages daily play and helps burn off pent-up energy.",
+    tag: "Play"
+  },
+  {
+    title: "Self-Grooming Brush",
+    text: "A corner-mounted brush cats can use on their own terms.",
+    tag: "Grooming"
+  },
+  {
+    title: "Cat Water Fountain",
+    text: "Flowing water can encourage cats to drink more throughout the day.",
+    tag: "Hydration"
   }
 ];
 
-export const metadata = {
-  title: "Smart finds for curious cats."
-};
-
-export default function Page() {
+export default function CatFindsPage() {
   return (
     <CategoryPage
-      eyebrow="CAT PICKS"
-      title="Smart finds for curious cats."
-      intro="Useful products for feeding, litter, play, comfort, grooming, and keeping cats entertained."
+      eyebrow="For Cats"
+      title="Cat Finds"
+      intro="Simple, well-considered picks for feeding, play, and comfort in cat households."
       items={items}
     />
   );

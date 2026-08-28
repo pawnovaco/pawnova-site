@@ -1,33 +1,46 @@
 import CategoryPage from "../../components/CategoryPage";
 
+export const metadata = { title: "Grooming" };
+
 const items = [
   {
-    "title": "Shedding tools",
-    "text": "Brushes and cleanup helpers for homes that seem to collect pet hair everywhere.",
-    "tag": "Shedding"
+    title: "Deshedding Tool",
+    text: "Reaches the undercoat to cut down on loose hair around the house.",
+    tag: "Coat Care"
   },
   {
-    "title": "Bath-time picks",
-    "text": "Useful bathing accessories for easier washes and less mess.",
-    "tag": "Bath"
+    title: "Slicker Brush",
+    text: "Good for everyday detangling on medium and long coats.",
+    tag: "Coat Care"
   },
   {
-    "title": "Nail & paw care",
-    "text": "Simple tools for routine nail and paw maintenance.",
-    "tag": "Paw Care"
+    title: "Nail Grinder",
+    text: "A quieter, more controlled alternative to traditional clippers.",
+    tag: "Nail Care"
+  },
+  {
+    title: "Waterless Shampoo",
+    text: "A quick option for freshening up between full baths.",
+    tag: "Bathing"
+  },
+  {
+    title: "Ear Cleaning Wipes",
+    text: "Gentle, pre-moistened wipes for routine ear maintenance.",
+    tag: "Hygiene"
+  },
+  {
+    title: "Grooming Glove",
+    text: "Combines petting and light deshedding in one easy motion.",
+    tag: "Coat Care"
   }
 ];
 
-export const metadata = {
-  title: "Grooming without the drama."
-};
-
-export default function Page() {
+export default function GroomingPage() {
   return (
     <CategoryPage
-      eyebrow="PET CARE"
-      title="Grooming without the drama."
-      intro="Brushes, bathing tools, nail care, shedding solutions, and everyday grooming helpers."
+      eyebrow="Care"
+      title="Grooming"
+      intro="Tools and routines that help keep coats, nails, and skin in good shape between visits to the groomer."
       items={items}
     />
   );

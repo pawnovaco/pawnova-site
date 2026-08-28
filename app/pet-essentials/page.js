@@ -1,33 +1,46 @@
 import CategoryPage from "../../components/CategoryPage";
 
+export const metadata = { title: "Pet Essentials" };
+
 const items = [
   {
-    "title": "Travel essentials",
-    "text": "Portable bowls, carriers, car accessories, and road-trip helpers.",
-    "tag": "Travel"
+    title: "Non-Slip Feeding Mat",
+    text: "Catches spills and keeps bowls from sliding around the kitchen floor.",
+    tag: "Feeding"
   },
   {
-    "title": "Home organization",
-    "text": "Storage and organization ideas for food, toys, leashes, and supplies.",
-    "tag": "Home"
+    title: "Collapsible Travel Bowl",
+    text: "Packs flat for walks, hikes, and car trips.",
+    tag: "Travel"
   },
   {
-    "title": "Feeding essentials",
-    "text": "Practical products for cleaner, easier daily feeding routines.",
-    "tag": "Feeding"
+    title: "Airline-Approved Carrier",
+    text: "A sturdy, well-ventilated carrier for trips and vet visits.",
+    tag: "Travel"
+  },
+  {
+    title: "Pet Hair Roller",
+    text: "A reusable roller that actually holds up to daily use.",
+    tag: "Home Care"
+  },
+  {
+    title: "Storage Bin with Scoop Lid",
+    text: "Keeps food fresh and makes portioning meals simple.",
+    tag: "Storage"
+  },
+  {
+    title: "Seatbelt Safety Clip",
+    text: "A simple way to keep pets secure during car rides.",
+    tag: "Travel"
   }
 ];
 
-export const metadata = {
-  title: "Pet essentials for real life."
-};
-
-export default function Page() {
+export default function PetEssentialsPage() {
   return (
     <CategoryPage
-      eyebrow="EVERYDAY PICKS"
-      title="Pet essentials for real life."
-      intro="Everyday products for home, travel, feeding, organization, and making pet routines easier."
+      eyebrow="Everyday"
+      title="Pet Essentials"
+      intro="The unglamorous basics — bowls, mats, storage, and travel gear — done right."
       items={items}
     />
   );

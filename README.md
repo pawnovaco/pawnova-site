@@ -26,7 +26,7 @@ http://localhost:3000
 
 - Replace placeholder product cards with real product recommendations.
 - Add your Amazon affiliate links.
-- Add your real contact email.
+- Add your real contact email (Contact page + Footer).
 - Add your Instagram, Facebook, TikTok, and Pinterest links.
 - Review the Privacy Policy based on the actual tools you use.
 - Keep the Amazon disclosure visible.

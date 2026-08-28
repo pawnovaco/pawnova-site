@@ -1,33 +1,46 @@
 import CategoryPage from "../../components/CategoryPage";
 
+export const metadata = { title: "Dog Finds" };
+
 const items = [
   {
-    "title": "Walk-time upgrades",
-    "text": "Useful accessories that can make daily walks smoother and easier.",
-    "tag": "Walks"
+    title: "Slow-Feed Bowl",
+    text: "Helps curb fast eating and reduce bloating risk for enthusiastic eaters.",
+    tag: "Feeding"
   },
   {
-    "title": "Cleanup helpers",
-    "text": "Simple products for hair, muddy paws, messes, and everyday cleanup.",
-    "tag": "Cleanup"
+    title: "No-Pull Harness",
+    text: "Distributes pressure evenly for more comfortable, controlled walks.",
+    tag: "Walking"
   },
   {
-    "title": "Comfort picks",
-    "text": "Beds, blankets, calming accessories, and cozy everyday essentials.",
-    "tag": "Comfort"
+    title: "Durable Chew Toy",
+    text: "Built for heavy chewers, with a shape designed for dental benefit.",
+    tag: "Play"
+  },
+  {
+    title: "Cooling Mat",
+    text: "A gel-based mat that helps dogs stay comfortable in warmer months.",
+    tag: "Comfort"
+  },
+  {
+    title: "Travel Water Bottle",
+    text: "A leak-resistant bottle with an attached bowl for walks and trips.",
+    tag: "Travel"
+  },
+  {
+    title: "Puzzle Feeder",
+    text: "Turns mealtime into light mental enrichment for active minds.",
+    tag: "Enrichment"
   }
 ];
 
-export const metadata = {
-  title: "Dog finds worth knowing about."
-};
-
-export default function Page() {
+export default function DogFindsPage() {
   return (
     <CategoryPage
-      eyebrow="DOG PICKS"
-      title="Dog finds worth knowing about."
-      intro="Practical products for walks, feeding, cleanup, travel, comfort, and everyday dog life."
+      eyebrow="For Dogs"
+      title="Dog Finds"
+      intro="Practical, well-reviewed products that make everyday life with a dog a little easier."
       items={items}
     />
   );
