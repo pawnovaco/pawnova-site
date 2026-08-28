@@ -1,6 +1,25 @@
 # Paw Nova
 
-A lightweight Next.js affiliate/content website starter for PawNovaCo.com.
+A Next.js dog-product discovery site for PawNovaCo.com, built on the
+Amazon Associates affiliate model, with a "Paw Nova Gives Back" mission
+layer.
+
+## Structure
+
+- `/` — homepage (hero, categories, why Paw Nova, featured finds, Gives
+  Back teaser, guide teasers, trust section, closing CTA)
+- `/dog-finds` — category hub linking to all 6 product categories
+- `/grooming`, `/play-enrichment`, `/walking-travel`, `/beds-comfort`,
+  `/feeding`, `/everyday-essentials` — product category pages
+- `/gives-back` — Paw Nova Gives Back mission page (honest "no impact
+  logged yet" state — update this once a real give-back happens)
+- `/about`, `/contact`, `/affiliate-disclosure`, `/privacy` — standard
+  pages
+- `/sitemap.xml`, `/robots.txt` — generated from `app/sitemap.js` and
+  `app/robots.js`
+
+Old URLs `/cat-finds` and `/pet-essentials` 301-redirect (see
+`next.config.mjs`) to `/` and `/everyday-essentials` respectively.
 
 ## Run locally
 
@@ -24,12 +43,18 @@ http://localhost:3000
 
 ## Before launch
 
-- Replace placeholder product cards with real product recommendations.
-- Add your Amazon affiliate links.
+- Replace placeholder product cards with real product recommendations
+  and live Amazon affiliate links (`components/FindCard.js` buttons are
+  currently disabled placeholders).
 - Add your real contact email (Contact page + Footer).
-- Add your Instagram, Facebook, TikTok, and Pinterest links.
+- Confirm the Instagram, Facebook, TikTok, and Pinterest links in the
+  footer are correct.
 - Review the Privacy Policy based on the actual tools you use.
 - Keep the Amazon disclosure visible.
+- When Paw Nova logs its first real give-back, replace the empty state
+  on `/gives-back` with real details (organization, date, what was
+  given, photos). Do not add placeholder impact numbers before that.
 
 Amazon disclosure included:
 "As an Amazon Associate I earn from qualifying purchases."
+

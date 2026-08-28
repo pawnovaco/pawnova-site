@@ -29,9 +29,7 @@ export default function Footer() {
       <div className="container footer-grid">
         <div>
           <div className="footer-brand">Paw Nova</div>
-          <p className="muted">
-            Pet finds worth knowing about — without the clutter.
-          </p>
+          <p className="muted">Better finds for happier dogs.</p>
           <div className="footer-social">
             {socials.map((s) => (
               <a
@@ -52,6 +50,7 @@ export default function Footer() {
 
         <div className="footer-links">
           <Link href="/about">About</Link>
+          <Link href="/gives-back">Paw Nova Gives Back</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/affiliate-disclosure">Affiliate Disclosure</Link>
           <Link href="/privacy">Privacy Policy</Link>

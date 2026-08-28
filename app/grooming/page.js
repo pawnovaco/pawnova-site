@@ -1,6 +1,11 @@
 import CategoryPage from "../../components/CategoryPage";
 
-export const metadata = { title: "Grooming" };
+export const metadata = {
+  title: "Grooming",
+  description:
+    "Brushes, tools, and grooming products that keep a dog's coat, nails, and skin in good shape.",
+  alternates: { canonical: "/grooming" }
+};
 
 const items = [
   {

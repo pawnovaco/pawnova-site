@@ -1,4 +1,8 @@
-export const metadata = { title: "Contact" };
+export const metadata = {
+  title: "Contact",
+  description: "Get in touch with Paw Nova with questions, product suggestions, or corrections.",
+  alternates: { canonical: "/contact" }
+};
 
 export default function ContactPage() {
   return (

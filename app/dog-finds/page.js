@@ -1,47 +1,78 @@
-import CategoryPage from "../../components/CategoryPage";
+import CategoryCard from "../../components/CategoryCard";
+import Reveal from "../../components/Reveal";
 
-export const metadata = { title: "Dog Finds" };
+export const metadata = {
+  title: "Dog Finds",
+  description:
+    "Browse Paw Nova's dog product picks by category — grooming, play, walking and travel, beds and comfort, feeding, and everyday essentials.",
+  alternates: { canonical: "/dog-finds" }
+};
 
-const items = [
+const categories = [
   {
-    title: "Slow-Feed Bowl",
-    text: "Helps curb fast eating and reduce bloating risk for enthusiastic eaters.",
-    tag: "Feeding"
+    eyebrow: "Care",
+    title: "Grooming",
+    text: "Brushes, tools, and routines that keep coats, nails, and skin in good shape.",
+    href: "/grooming"
   },
   {
-    title: "No-Pull Harness",
-    text: "Distributes pressure evenly for more comfortable, controlled walks.",
-    tag: "Walking"
+    eyebrow: "Play",
+    title: "Play & Enrichment",
+    text: "Toys and activities that keep a dog's mind and body engaged.",
+    href: "/play-enrichment"
   },
   {
-    title: "Durable Chew Toy",
-    text: "Built for heavy chewers, with a shape designed for dental benefit.",
-    tag: "Play"
+    eyebrow: "Out & About",
+    title: "Walking & Travel",
+    text: "Harnesses, leashes, and travel gear for walks and trips.",
+    href: "/walking-travel"
   },
   {
-    title: "Cooling Mat",
-    text: "A gel-based mat that helps dogs stay comfortable in warmer months.",
-    tag: "Comfort"
+    eyebrow: "Rest",
+    title: "Beds & Comfort",
+    text: "Beds, mats, and comfort products for wherever a dog winds down.",
+    href: "/beds-comfort"
   },
   {
-    title: "Travel Water Bottle",
-    text: "A leak-resistant bottle with an attached bowl for walks and trips.",
-    tag: "Travel"
+    eyebrow: "Mealtime",
+    title: "Feeding",
+    text: "Bowls, feeders, and accessories that make mealtime easier.",
+    href: "/feeding"
   },
   {
-    title: "Puzzle Feeder",
-    text: "Turns mealtime into light mental enrichment for active minds.",
-    tag: "Enrichment"
+    eyebrow: "Everyday",
+    title: "Everyday Essentials",
+    text: "The unglamorous basics — cleanup, hygiene, and everyday gear.",
+    href: "/everyday-essentials"
   }
 ];
 
 export default function DogFindsPage() {
   return (
-    <CategoryPage
-      eyebrow="For Dogs"
-      title="Dog Finds"
-      intro="Practical, well-reviewed products that make everyday life with a dog a little easier."
-      items={items}
-    />
+    <>
+      <section className="page-hero">
+        <div className="container narrow">
+          <span className="eyebrow">Dog Finds</span>
+          <h1>Find what your dog actually needs</h1>
+          <p>
+            Browse Paw Nova's picks by category — practical, well-considered
+            products for grooming, play, travel, comfort, feeding, and
+            everyday life with a dog.
+          </p>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="category-grid">
+            {categories.map((c, i) => (
+              <Reveal key={c.href} delay={i * 70}>
+                <CategoryCard {...c} />
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

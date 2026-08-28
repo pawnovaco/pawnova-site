@@ -29,9 +29,9 @@ export default function CategoryPage({ eyebrow, title, intro, items }) {
           <Reveal>
             <h2>How we choose what to feature</h2>
             <p>
-              Paw Nova focuses on practical products that solve real pet-owner
-              problems, make everyday routines easier, or add a little more
-              comfort to life with pets.
+              Paw Nova focuses on practical products that solve real
+              dog-owner problems, make everyday routines easier, or add a
+              little more comfort to life with a dog.
             </p>
           </Reveal>
         </div>

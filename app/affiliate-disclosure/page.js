@@ -1,4 +1,11 @@
-export const metadata = { title: "Affiliate Disclosure" };
+import Link from "next/link";
+
+export const metadata = {
+  title: "Affiliate Disclosure",
+  description:
+    "How Paw Nova earns from Amazon affiliate links, and how that's different from the Paw Nova Gives Back initiative.",
+  alternates: { canonical: "/affiliate-disclosure" }
+};
 
 export default function AffiliateDisclosurePage() {
   return (
@@ -22,7 +29,19 @@ export default function AffiliateDisclosurePage() {
         <p>
           Affiliate relationships do not influence which products we choose
           to feature. We aim to only recommend products we believe are
-          genuinely useful.
+          genuinely useful for dogs and their owners.
+        </p>
+        <h2>How this relates to Paw Nova Gives Back</h2>
+        <p>
+          Paw Nova sets aside a portion of the commissions it earns to help
+          provide food and supplies for dogs in shelters and rescue
+          organizations, through an initiative we call{" "}
+          <Link href="/gives-back">Paw Nova Gives Back</Link>. This is
+          separate from the affiliate commission itself: your purchase is
+          not a donation, Paw Nova is not a charity or nonprofit
+          organization, and nothing about the price you pay changes. Paw
+          Nova Gives Back reflects what we choose to do with part of our own
+          earnings, after the fact.
         </p>
       </div>
     </section>

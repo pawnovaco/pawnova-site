@@ -1,4 +1,8 @@
-export const metadata = { title: "Privacy Policy" };
+export const metadata = {
+  title: "Privacy Policy",
+  description: "Paw Nova's privacy policy covering information collected through the site.",
+  alternates: { canonical: "/privacy" }
+};
 
 export default function PrivacyPage() {
   return (

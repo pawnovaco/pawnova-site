@@ -5,23 +5,24 @@ import Footer from "../components/Footer";
 export const metadata = {
   metadataBase: new URL("https://pawnovaco.com"),
   title: {
-    default: "Paw Nova | Pet Finds Worth Knowing About",
+    default: "Paw Nova | Better Finds for Happier Dogs",
     template: "%s | Paw Nova"
   },
   description:
-    "Useful pet finds, everyday essentials, grooming picks, and smart products for dogs, cats, and the people who love them.",
+    "Discover useful dog products, practical picks, and everyday finds selected to make life with your dog a little better. Part of what we earn helps dogs in need.",
   keywords: [
-    "pet finds",
     "dog products",
-    "cat products",
-    "pet grooming",
-    "pet essentials",
+    "dog owner finds",
+    "dog grooming",
+    "dog essentials",
+    "Amazon dog finds",
     "Paw Nova"
   ],
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Paw Nova | Pet Finds Worth Knowing About",
+    title: "Paw Nova | Better Finds for Happier Dogs",
     description:
-      "Useful pet finds, everyday essentials, grooming picks, and smart products for dogs, cats, and the people who love them.",
+      "Discover useful dog products, practical picks, and everyday finds selected to make life with your dog a little better.",
     url: "https://pawnovaco.com",
     siteName: "Paw Nova",
     images: [{ url: "/pawnova-logo.png", width: 494, height: 410 }],
@@ -30,9 +31,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Paw Nova | Pet Finds Worth Knowing About",
+    title: "Paw Nova | Better Finds for Happier Dogs",
     description:
-      "Useful pet finds, everyday essentials, grooming picks, and smart products for dogs, cats, and the people who love them.",
+      "Discover useful dog products, practical picks, and everyday finds selected to make life with your dog a little better.",
     images: ["/pawnova-logo.png"]
   }
 };
