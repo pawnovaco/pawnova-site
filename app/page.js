@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CategoryCard from "../components/CategoryCard";
+import Reveal from "../components/Reveal";
 
 const categories = [
   {
@@ -57,6 +58,15 @@ export default function HomePage() {
           <div className="hero-card">
             <div className="hero-card-orbit orbit-one" />
             <div className="hero-card-orbit orbit-two" />
+            <span className="hero-sparkle sparkle-1" aria-hidden="true">
+              ✦
+            </span>
+            <span className="hero-sparkle sparkle-2" aria-hidden="true">
+              ✦
+            </span>
+            <span className="hero-sparkle sparkle-3" aria-hidden="true">
+              ✦
+            </span>
             <span className="hero-paw" aria-hidden="true">
               🐾
             </span>
@@ -70,15 +80,19 @@ export default function HomePage() {
 
       <section className="section">
         <div className="container">
-          <div className="section-heading">
-            <div>
-              <span className="eyebrow">Browse</span>
-              <h2>Shop by category</h2>
+          <Reveal>
+            <div className="section-heading">
+              <div>
+                <span className="eyebrow">Browse</span>
+                <h2>Shop by category</h2>
+              </div>
             </div>
-          </div>
+          </Reveal>
           <div className="category-grid">
-            {categories.map((c) => (
-              <CategoryCard key={c.href} {...c} />
+            {categories.map((c, i) => (
+              <Reveal key={c.href} delay={i * 80}>
+                <CategoryCard {...c} />
+              </Reveal>
             ))}
           </div>
         </div>
@@ -86,48 +100,58 @@ export default function HomePage() {
 
       <section className="section section-dark">
         <div className="container split">
-          <div>
-            <span className="eyebrow eyebrow-light">Why Paw Nova</span>
-            <h2>Finds that actually earn a spot in your home</h2>
-          </div>
+          <Reveal>
+            <div>
+              <span className="eyebrow eyebrow-light">Why Paw Nova</span>
+              <h2>Finds that actually earn a spot in your home</h2>
+            </div>
+          </Reveal>
           <div className="feature-list">
-            <div>
-              <strong>Hand-picked, not auto-generated</strong>
-              <p>
-                Every product featured is chosen with a real use case in
-                mind — not pulled from a bestseller feed.
-              </p>
-            </div>
-            <div>
-              <strong>Focused on everyday problems</strong>
-              <p>
-                We look for things that solve a real routine headache, not
-                just novelty items.
-              </p>
-            </div>
-            <div>
-              <strong>Simple, honest recommendations</strong>
-              <p>
-                No inflated claims — just what a product is good at, and who
-                it's actually for.
-              </p>
-            </div>
+            <Reveal delay={0}>
+              <div>
+                <strong>Hand-picked, not auto-generated</strong>
+                <p>
+                  Every product featured is chosen with a real use case in
+                  mind — not pulled from a bestseller feed.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={100}>
+              <div>
+                <strong>Focused on everyday problems</strong>
+                <p>
+                  We look for things that solve a real routine headache, not
+                  just novelty items.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={200}>
+              <div>
+                <strong>Simple, honest recommendations</strong>
+                <p>
+                  No inflated claims — just what a product is good at, and
+                  who it's actually for.
+                </p>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
 
       <section className="section">
         <div className="container">
-          <div className="cta-panel">
-            <div>
-              <span className="eyebrow">Get started</span>
-              <h2>Start with today's most useful pet finds</h2>
+          <Reveal>
+            <div className="cta-panel">
+              <div>
+                <span className="eyebrow">Get started</span>
+                <h2>Start with today's most useful pet finds</h2>
+              </div>
+              <p>
+                Browse curated picks across dogs, cats, grooming, and
+                everyday essentials.
+              </p>
             </div>
-            <p>
-              Browse curated picks across dogs, cats, grooming, and everyday
-              essentials.
-            </p>
-          </div>
+          </Reveal>
         </div>
       </section>
     </>

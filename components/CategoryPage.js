@@ -1,4 +1,5 @@
 import FindCard from "./FindCard";
+import Reveal from "./Reveal";
 
 export default function CategoryPage({ eyebrow, title, intro, items }) {
   return (
@@ -14,8 +15,10 @@ export default function CategoryPage({ eyebrow, title, intro, items }) {
       <section className="section">
         <div className="container">
           <div className="cards-grid">
-            {items.map((item) => (
-              <FindCard key={item.title} {...item} />
+            {items.map((item, i) => (
+              <Reveal key={item.title} delay={(i % 3) * 90}>
+                <FindCard {...item} />
+              </Reveal>
             ))}
           </div>
         </div>
@@ -23,12 +26,14 @@ export default function CategoryPage({ eyebrow, title, intro, items }) {
 
       <section className="section section-soft">
         <div className="container narrow">
-          <h2>How we choose what to feature</h2>
-          <p>
-            Paw Nova focuses on practical products that solve real pet-owner
-            problems, make everyday routines easier, or add a little more
-            comfort to life with pets.
-          </p>
+          <Reveal>
+            <h2>How we choose what to feature</h2>
+            <p>
+              Paw Nova focuses on practical products that solve real pet-owner
+              problems, make everyday routines easier, or add a little more
+              comfort to life with pets.
+            </p>
+          </Reveal>
         </div>
       </section>
     </>
