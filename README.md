@@ -32,3 +32,13 @@ npm run dev
 ```bash
 npm run build
 ```
+
+## Supabase protected dashboard
+
+The `/dashboard` route now requires Supabase email/password authentication. `/login` is the private Paw Nova workspace sign-in page. There is intentionally no public sign-up flow.
+
+Expected Vercel environment variables:
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` (preferred) or `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+
+Create the owner login in Supabase Dashboard > Authentication > Users. Do not commit secret/service-role keys or passwords to GitHub.
