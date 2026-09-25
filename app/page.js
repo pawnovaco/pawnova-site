@@ -15,8 +15,12 @@ export default function Home() {
 
   return (
     <>
-      <section className="hero hero-editorial">
-        <div className="container hero-grid">
+      <section className="hero hero-editorial hero-pet-visual">
+        <video className="hero-pet-video" autoPlay muted loop playsInline preload="metadata" poster="/media/pawnova-dogs-fetch.png">
+          <source src="/media/pawnova-dog-park-video.mp4" type="video/mp4" />
+        </video>
+        <div className="hero-pet-overlay" />
+        <div className="container hero-grid hero-pet-content">
           <div className="hero-copy">
             <span className="eyebrow">INDEPENDENT PET PRODUCT DISCOVERY</span>
             <h1>Better pet finds start with a better reason to recommend them.</h1>
@@ -72,6 +76,14 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="pet-life-strip">
+        <div className="pet-life-grid">
+          <div className="pet-life-image pet-life-large" style={{backgroundImage: "url('/media/pawnova-dog-park-pack.png')"}}><span>Play</span></div>
+          <div className="pet-life-image" style={{backgroundImage: "url('/media/pawnova-sleeping-pets.png')"}}><span>Rest</span></div>
+          <div className="pet-life-image" style={{backgroundImage: "url('/media/pawnova-dog-cat-yard.png')"}}><span>Everyday life</span></div>
+        </div>
+      </section>
+
       <section className="section section-dark editorial-dark">
         <div className="container credibility-grid">
           <div className="credibility-lead"><span className="eyebrow eyebrow-light">WHY PAW NOVA</span><h2>A recommendation should earn its place.</h2><p>We are building Paw Nova around usefulness, transparency, and better product discovery. Affiliate links help support the site, but they do not decide what deserves attention.</p><Link href="/about" className="button button-light">Our mission and approach</Link></div>
@@ -94,6 +106,15 @@ export default function Home() {
         <div className="container">
           <div className="section-heading section-heading-wide"><div><span className="eyebrow">BUYING GUIDES</span><h2>Know what matters before opening Amazon.</h2></div><p>Our guides are designed to make the shopping decision clearer, not to add another wall of products to scroll through.</p></div>
           <div className="guide-grid">{guides.slice(0,6).map((g,index)=><article className="guide-card guide-card-editorial" key={g.slug}><span className="guide-index">0{index+1}</span><span className="pill">{g.cluster}</span><h3>{g.title}</h3><p>{g.description}</p><Link href={`/guides/${g.slug}`} className="text-link">Read guide →</Link></article>)}</div>
+        </div>
+      </section>
+
+      <section className="wide-pet-story" style={{backgroundImage: "url('/media/pawnova-dogs-park.png')"}}>
+        <div className="wide-pet-story-overlay" />
+        <div className="container wide-pet-story-copy">
+          <span className="eyebrow eyebrow-light">REAL PET LIFE</span>
+          <h2>Good finds should make more sense in the life you already share with them.</h2>
+          <p>From playtime and walks to quiet afternoons at home, Paw Nova starts with the moment and the need, then helps narrow the products worth considering.</p>
         </div>
       </section>
 

@@ -1208,3 +1208,52 @@ h3 {
   .category-card-editorial { grid-template-columns:38px 1fr; padding:24px; min-height:230px; }
   .mission-panel { padding:30px 24px; }
 }
+
+
+/* Paw Nova pet-led visual system */
+.hero-pet-visual {
+  position: relative;
+  overflow: hidden;
+  min-height: 720px;
+  color: #fff;
+  background: var(--ink-dark);
+}
+.hero-pet-video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.hero-pet-overlay { position:absolute; inset:0; background:linear-gradient(90deg,rgba(6,31,34,.94) 0%,rgba(6,31,34,.74) 42%,rgba(6,31,34,.18) 78%),linear-gradient(0deg,rgba(6,31,34,.5),transparent 55%); }
+.hero-pet-content { position:relative; z-index:2; padding-top:92px; padding-bottom:92px; }
+.hero-pet-visual .hero-copy { color:#fff; }
+.hero-pet-visual .hero-text { color:rgba(255,255,255,.86); }
+.hero-pet-visual .eyebrow { color:#8ce5ec; }
+.hero-pet-visual .button { background:var(--gold); color:var(--ink-dark); }
+.hero-pet-visual .button:hover { background:#ffd36d; }
+.hero-pet-visual .button-ghost { background:rgba(255,255,255,.1); color:#fff; border:1px solid rgba(255,255,255,.45); backdrop-filter:blur(12px); }
+.hero-pet-visual .trust-row { color:rgba(255,255,255,.8); }
+.hero-pet-visual .discovery-panel { background:rgba(255,255,255,.92); color:var(--text); box-shadow:0 24px 70px rgba(0,0,0,.22); backdrop-filter:blur(14px); }
+
+.pet-life-strip { background:#071f22; padding:18px; }
+.pet-life-grid { max-width:1400px; margin:auto; display:grid; grid-template-columns:1.45fr 1fr 1fr; gap:18px; }
+.pet-life-image { min-height:390px; position:relative; overflow:hidden; border-radius:24px; background-size:cover; background-position:center; transition:transform .35s ease; }
+.pet-life-image:hover { transform:translateY(-5px); }
+.pet-life-image::after { content:""; position:absolute; inset:0; background:linear-gradient(0deg,rgba(5,29,31,.72),transparent 55%); }
+.pet-life-image span { position:absolute; left:28px; bottom:24px; z-index:1; color:white; font-size:1.15rem; font-weight:800; letter-spacing:.04em; }
+
+.wide-pet-story { min-height:680px; position:relative; display:flex; align-items:flex-end; background-size:cover; background-position:center; overflow:hidden; }
+.wide-pet-story-overlay { position:absolute; inset:0; background:linear-gradient(0deg,rgba(5,29,31,.94),rgba(5,29,31,.05) 72%); }
+.wide-pet-story-copy { position:relative; z-index:1; color:white; padding-top:90px; padding-bottom:76px; }
+.wide-pet-story-copy h2 { max-width:850px; margin:0 0 20px; font-size:clamp(2.6rem,5vw,5.2rem); line-height:.98; letter-spacing:-.045em; }
+.wide-pet-story-copy p { max-width:680px; margin:0; color:rgba(255,255,255,.82); font-size:1.08rem; }
+
+@media (max-width: 900px) {
+  .hero-pet-visual { min-height:760px; }
+  .hero-pet-overlay { background:linear-gradient(0deg,rgba(6,31,34,.96) 0%,rgba(6,31,34,.48) 65%,rgba(6,31,34,.12) 100%); }
+  .hero-pet-content { padding-top:70px; padding-bottom:58px; }
+  .pet-life-grid { grid-template-columns:1fr; }
+  .pet-life-image { min-height:320px; }
+  .wide-pet-story { min-height:560px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-pet-video { display:none; }
+  .hero-pet-visual { background-image:url('/media/pawnova-dogs-fetch.png'); background-size:cover; background-position:center; }
+  .pet-life-image { transition:none; }
+}
