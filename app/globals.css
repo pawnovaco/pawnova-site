@@ -1257,3 +1257,51 @@ h3 {
   .hero-pet-visual { background-image:url('/media/pawnova-dogs-fetch.png'); background-size:cover; background-position:center; }
   .pet-life-image { transition:none; }
 }
+
+/* Contrast and second-video fixes */
+.hero-pet-visual .discovery-panel {
+  background: rgba(250, 251, 248, .96);
+  color: #0a3435;
+}
+.hero-pet-visual .discovery-topline { color: #557f80; }
+.hero-pet-visual .discovery-kicker { color: #5f7500; }
+.hero-pet-visual .discovery-main h2 { color: #082f31; }
+.hero-pet-visual .discovery-main p { color: #456d6d; }
+.hero-pet-visual .discovery-steps { border-top-color: rgba(8,47,49,.14); }
+.hero-pet-visual .discovery-steps div { border-bottom-color: rgba(8,47,49,.12); }
+.hero-pet-visual .discovery-steps b { color: #008f93; }
+.hero-pet-visual .discovery-steps span { color: #173f40; }
+
+.wide-pet-story-overlay {
+  background: linear-gradient(90deg, rgba(5,29,31,.90) 0%, rgba(5,29,31,.66) 50%, rgba(5,29,31,.20) 100%), linear-gradient(0deg,rgba(5,29,31,.72),rgba(5,29,31,.02) 75%);
+}
+.wide-pet-story-copy h2 { color: #fff; text-shadow: 0 2px 18px rgba(0,0,0,.28); }
+.wide-pet-story-copy p { color: rgba(255,255,255,.92); text-shadow: 0 1px 10px rgba(0,0,0,.28); }
+.wide-pet-story-copy .eyebrow { color: #8ce5ec; }
+
+.motion-story {
+  min-height: 680px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: #071f22;
+}
+.motion-story-video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.motion-story-overlay { position:absolute; inset:0; background:linear-gradient(90deg,rgba(5,29,31,.93) 0%,rgba(5,29,31,.65) 48%,rgba(5,29,31,.12) 82%),linear-gradient(0deg,rgba(5,29,31,.62),transparent 60%); }
+.motion-story-copy { position:relative; z-index:2; color:#fff; padding-top:100px; padding-bottom:82px; }
+.motion-story-copy h2 { max-width:850px; margin:0 0 22px; color:#fff; font-size:clamp(2.7rem,5.2vw,5.4rem); line-height:.98; letter-spacing:-.045em; text-shadow:0 2px 18px rgba(0,0,0,.28); }
+.motion-story-copy p { max-width:680px; margin:0 0 28px; color:rgba(255,255,255,.92); font-size:1.1rem; line-height:1.7; }
+.motion-story-copy .eyebrow { color:#8ce5ec; }
+.motion-story-copy .button-light { background:#fff; color:#082f31; }
+
+@media (max-width: 900px) {
+  .motion-story { min-height:580px; }
+  .motion-story-overlay { background:linear-gradient(0deg,rgba(5,29,31,.94) 0%,rgba(5,29,31,.45) 72%,rgba(5,29,31,.10) 100%); }
+  .motion-story-copy { padding-top:80px; padding-bottom:58px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-story-video { display:none; }
+  .motion-story { background-image:url('/media/pawnova-dog-cat-home.png'); background-size:cover; background-position:center; }
+}

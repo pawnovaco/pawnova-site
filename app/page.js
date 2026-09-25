@@ -109,6 +109,19 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="motion-story">
+        <video className="motion-story-video" autoPlay muted loop playsInline preload="metadata" poster="/media/pawnova-dog-cat-home.png">
+          <source src="/media/pawnova-playing-pets.mp4" type="video/mp4" />
+        </video>
+        <div className="motion-story-overlay" />
+        <div className="container motion-story-copy">
+          <span className="eyebrow eyebrow-light">LIFE WITH PETS</span>
+          <h2>Life with pets is messy. Finding the right stuff should not be.</h2>
+          <p>Paw Nova helps narrow the search with practical finds built around how pets actually live, play, travel, eat, and rest.</p>
+          <Link href="/dog-finds" className="button button-light">Explore practical finds</Link>
+        </div>
+      </section>
+
       <section className="wide-pet-story" style={{backgroundImage: "url('/media/pawnova-dogs-park.png')"}}>
         <div className="wide-pet-story-overlay" />
         <div className="container wide-pet-story-copy">
