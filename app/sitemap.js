@@ -1,27 +1,4 @@
-const routes = [
-  { path: "", priority: 1, changeFrequency: "weekly" },
-  { path: "/dog-finds", priority: 0.9, changeFrequency: "weekly" },
-  { path: "/grooming", priority: 0.8, changeFrequency: "weekly" },
-  { path: "/play-enrichment", priority: 0.8, changeFrequency: "weekly" },
-  { path: "/walking-travel", priority: 0.8, changeFrequency: "weekly" },
-  { path: "/beds-comfort", priority: 0.8, changeFrequency: "weekly" },
-  { path: "/feeding", priority: 0.8, changeFrequency: "weekly" },
-  { path: "/everyday-essentials", priority: 0.8, changeFrequency: "weekly" },
-  { path: "/gives-back", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/about", priority: 0.6, changeFrequency: "monthly" },
-  { path: "/contact", priority: 0.4, changeFrequency: "yearly" },
-  { path: "/affiliate-disclosure", priority: 0.3, changeFrequency: "yearly" },
-  { path: "/privacy", priority: 0.3, changeFrequency: "yearly" }
-];
-
-export default function sitemap() {
-  const base = "https://pawnovaco.com";
-  const now = new Date();
-
-  return routes.map((route) => ({
-    url: `${base}${route.path}`,
-    lastModified: now,
-    changeFrequency: route.changeFrequency,
-    priority: route.priority
-  }));
-}
+import {products,guides} from "../lib/catalog";
+const base="https://pawnovaco.com";
+const staticRoutes=["","/dog-finds","/guides","/grooming","/play-enrichment","/walking-travel","/beds-comfort","/feeding","/everyday-essentials","/gives-back","/about","/contact","/affiliate-disclosure","/privacy"];
+export default function sitemap(){const lastModified=new Date("2026-09-26");return [...staticRoutes.map((path,i)=>({url:`${base}${path}`,lastModified,changeFrequency:i<9?"weekly":"monthly",priority:path===""?1:path==="/dog-finds"||path==="/guides"?.9:.6})),...products.map(p=>({url:`${base}/products/${p.slug}`,lastModified:new Date(p.updated),changeFrequency:"monthly",priority:.7})),...guides.map(g=>({url:`${base}/guides/${g.slug}`,lastModified:new Date(g.updated),changeFrequency:"monthly",priority:.8}))];}

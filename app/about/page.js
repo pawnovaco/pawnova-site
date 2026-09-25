@@ -21,7 +21,7 @@ export default function AboutPage() {
         <p>
           We created Paw Nova to help dog owners discover useful products,
           practical finds, and everyday essentials that can make life with a
-          dog a little easier — grooming tools, walking gear, comfortable
+          dog a little easier, grooming tools, walking gear, comfortable
           beds, feeding accessories, and the everyday basics in between.
         </p>
         <h2>What we do</h2>
@@ -29,7 +29,7 @@ export default function AboutPage() {
           We look across dog gear and everyday essentials, and highlight the
           ones that seem genuinely useful based on real reviews and real use
           cases. Product usefulness is always the first reason something
-          earns a spot on Paw Nova — nothing is featured just to fill space.
+          earns a spot on Paw Nova, nothing is featured just to fill space.
         </p>
         <h2>Something beyond product recommendations</h2>
         <p>

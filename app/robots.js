@@ -1,9 +1,1 @@
-export default function robots() {
-  return {
-    rules: {
-      userAgent: "*",
-      allow: "/"
-    },
-    sitemap: "https://pawnovaco.com/sitemap.xml"
-  };
-}
+export default function robots(){return {rules:[{userAgent:"*",allow:"/",disallow:["/dashboard","/api/"]}],sitemap:"https://pawnovaco.com/sitemap.xml",host:"https://pawnovaco.com"};}

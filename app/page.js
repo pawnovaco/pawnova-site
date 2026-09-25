@@ -1,285 +1,106 @@
 import Link from "next/link";
-import CategoryCard from "../components/CategoryCard";
-import FindCard from "../components/FindCard";
-import Reveal from "../components/Reveal";
+import ProductCard from "../components/ProductCard";
+import AffiliateDisclosure from "../components/AffiliateDisclosure";
+import { products, guides, categoryMap } from "../lib/catalog";
 
-const categories = [
-  {
-    eyebrow: "Care",
-    title: "Grooming",
-    text: "Brushes, tools, and routines that keep coats, nails, and skin in good shape.",
-    href: "/grooming"
-  },
-  {
-    eyebrow: "Play",
-    title: "Play & Enrichment",
-    text: "Toys and activities that keep a dog's mind and body engaged.",
-    href: "/play-enrichment"
-  },
-  {
-    eyebrow: "Out & About",
-    title: "Walking & Travel",
-    text: "Harnesses, leashes, and travel gear for walks and trips.",
-    href: "/walking-travel"
-  },
-  {
-    eyebrow: "Rest",
-    title: "Beds & Comfort",
-    text: "Beds, mats, and comfort products for wherever a dog winds down.",
-    href: "/beds-comfort"
-  },
-  {
-    eyebrow: "Mealtime",
-    title: "Feeding",
-    text: "Bowls, feeders, and accessories that make mealtime easier.",
-    href: "/feeding"
-  },
-  {
-    eyebrow: "Everyday",
-    title: "Everyday Essentials",
-    text: "The unglamorous basics — cleanup, hygiene, and everyday gear.",
-    href: "/everyday-essentials"
-  }
+const proofPoints = [
+  ["120", "curated finds"],
+  ["6", "practical categories"],
+  ["0", "pay-to-rank placements"],
 ];
 
-const featuredFinds = [
-  {
-    title: "Durable Chew Toy",
-    text: "Built for heavy chewers, with a shape designed for dental benefit.",
-    tag: "Play & Enrichment"
-  },
-  {
-    title: "No-Pull Harness",
-    text: "Distributes pressure evenly for more comfortable, controlled walks.",
-    tag: "Walking & Travel"
-  },
-  {
-    title: "Orthopedic Dog Bed",
-    text: "Supportive foam that helps cushion joints, especially for older dogs.",
-    tag: "Beds & Comfort"
-  },
-  {
-    title: "Slow-Feed Bowl",
-    text: "Helps curb fast eating and reduce bloating risk for enthusiastic eaters.",
-    tag: "Feeding"
-  }
-];
+export default function Home() {
+  const featured = [products[20], products[40], products[60], products[80], products[100], products[0]];
+  const categoryEntries = Object.entries(categoryMap);
 
-const guideTopics = [
-  "5 Amazon Finds Every Dog Owner Should Know About",
-  "Best Brushes for Dogs That Shed",
-  "Products That Make Bath Time Easier",
-  "Dog Travel Essentials",
-  "New Puppy Essentials",
-  "Things We Wish We Bought Earlier as Dog Owners"
-];
-
-export default function HomePage() {
   return (
     <>
-      <section className="hero">
+      <section className="hero hero-editorial">
         <div className="container hero-grid">
-          <div>
-            <span className="eyebrow">Paw Nova</span>
-            <h1>Better Finds for Happier Dogs.</h1>
+          <div className="hero-copy">
+            <span className="eyebrow">INDEPENDENT PET PRODUCT DISCOVERY</span>
+            <h1>Better pet finds start with a better reason to recommend them.</h1>
             <p className="hero-text">
-              Discover useful dog products, practical picks, and everyday
-              finds selected to make life with your dog a little better.
+              Paw Nova organizes useful dog products around real needs, not endless storefront clutter. Explore practical shortlists, buying guides, and clear notes that help you narrow the search before you shop.
             </p>
             <div className="hero-actions">
-              <Link href="/dog-finds" className="button">
-                Explore Dog Finds
-              </Link>
-              <Link href="/about" className="button button-ghost">
-                Our Mission
-              </Link>
+              <Link href="/dog-finds" className="button">Explore Paw Nova Finds</Link>
+              <Link href="/guides" className="button button-ghost">Read the Guides</Link>
             </div>
-            <p className="microcopy">
-              As an Amazon Associate I earn from qualifying purchases.
-            </p>
+            <div className="trust-row">
+              <span>Useful first</span><span>Clear affiliate disclosure</span><span>No fake ratings</span>
+            </div>
+            <AffiliateDisclosure compact />
           </div>
 
-          <div className="hero-card">
-            <div className="hero-card-orbit orbit-one" />
-            <div className="hero-card-orbit orbit-two" />
-            <span className="hero-sparkle sparkle-1" aria-hidden="true">
-              ✦
-            </span>
-            <span className="hero-sparkle sparkle-2" aria-hidden="true">
-              ✦
-            </span>
-            <span className="hero-sparkle sparkle-3" aria-hidden="true">
-              ✦
-            </span>
-            <span className="hero-paw" aria-hidden="true">
-              🐾
-            </span>
-            <div className="hero-card-copy">
-              <span>DOG-APPROVED PICKS</span>
-              <strong>Useful dog products, actually worth buying.</strong>
+          <div className="discovery-panel">
+            <div className="discovery-topline"><span>THE PAW NOVA STANDARD</span><span>01 / DISCOVER</span></div>
+            <div className="discovery-main">
+              <span className="discovery-kicker">Finds with context</span>
+              <h2>Less scrolling.<br/>More useful choices.</h2>
+              <p>We start with the problem, explain what matters, then point you toward products worth considering.</p>
+            </div>
+            <div className="discovery-steps">
+              <div><b>01</b><span>Start with a real pet-owner need</span></div>
+              <div><b>02</b><span>Understand what to look for</span></div>
+              <div><b>03</b><span>Compare a focused shortlist</span></div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section">
+      <section className="proof-strip">
+        <div className="container proof-grid">
+          {proofPoints.map(([number,label]) => <div key={label}><strong>{number}</strong><span>{label}</span></div>)}
+          <div className="proof-note">Built to help you research before you buy.</div>
+        </div>
+      </section>
+
+      <section className="section browse-section">
         <div className="container">
-          <Reveal>
-            <div className="section-heading">
-              <div>
-                <span className="eyebrow">Browse</span>
-                <h2>Find what your dog actually needs</h2>
-              </div>
-            </div>
-          </Reveal>
-          <div className="category-grid">
-            {categories.map((c, i) => (
-              <Reveal key={c.href} delay={i * 70}>
-                <CategoryCard {...c} />
-              </Reveal>
-            ))}
+          <div className="section-heading section-heading-wide">
+            <div><span className="eyebrow">SHOP BY NEED</span><h2>Start with what you are trying to solve.</h2></div>
+            <p>Good recommendations need context. Choose a category, understand the use case, then explore the products that fit it.</p>
+          </div>
+          <div className="category-grid category-grid-editorial">
+            {categoryEntries.map(([slug,c], index) => <Link className="category-card category-card-editorial" href={`/${slug}`} key={slug}>
+              <div className="category-number">0{index + 1}</div>
+              <div><span className="eyebrow">20 CURATED FINDS</span><h3>{c.label}</h3><p>{c.description}.</p></div>
+              <span className="round-arrow" aria-hidden="true">↗</span>
+            </Link>)}
           </div>
         </div>
       </section>
 
-      <section className="section section-dark">
-        <div className="container split">
-          <Reveal>
-            <div>
-              <span className="eyebrow eyebrow-light">Why Paw Nova</span>
-              <h2>Finding the good stuff for your best friend.</h2>
-            </div>
-          </Reveal>
-          <div className="feature-list">
-            <Reveal delay={0}>
-              <div>
-                <strong>Hand-picked, not auto-generated</strong>
-                <p>
-                  Every product featured is chosen with a real use case in
-                  mind — not pulled from a bestseller feed.
-                </p>
-              </div>
-            </Reveal>
-            <Reveal delay={100}>
-              <div>
-                <strong>Focused on everyday dog problems</strong>
-                <p>
-                  We research and curate useful dog products so owners can
-                  spend less time searching and more time with their dog.
-                </p>
-              </div>
-            </Reveal>
-            <Reveal delay={200}>
-              <div>
-                <strong>Simple, honest recommendations</strong>
-                <p>
-                  No inflated claims — just what a product is good at, and
-                  who it's actually for.
-                </p>
-              </div>
-            </Reveal>
+      <section className="section section-dark editorial-dark">
+        <div className="container credibility-grid">
+          <div className="credibility-lead"><span className="eyebrow eyebrow-light">WHY PAW NOVA</span><h2>A recommendation should earn its place.</h2><p>We are building Paw Nova around usefulness, transparency, and better product discovery. Affiliate links help support the site, but they do not decide what deserves attention.</p><Link href="/about" className="button button-light">Our mission and approach</Link></div>
+          <div className="principles">
+            <article><span>01</span><div><h3>Problem before product</h3><p>We organize finds around actual needs like grooming, travel, feeding, comfort, play, and everyday care.</p></div></article>
+            <article><span>02</span><div><h3>Context before the click</h3><p>Our guides explain what matters so you can decide whether a product type even makes sense for your dog.</p></div></article>
+            <article><span>03</span><div><h3>Transparent recommendations</h3><p>No invented ratings, stale prices, or paid placement pretending to be editorial judgment.</p></div></article>
           </div>
         </div>
       </section>
 
-      <section className="section">
+      <section className="section finds-section">
         <div className="container">
-          <Reveal>
-            <div className="section-heading">
-              <div>
-                <span className="eyebrow">Featured</span>
-                <h2>A few current favorites</h2>
-              </div>
-            </div>
-          </Reveal>
-          <p className="muted section-disclosure">
-            As an Amazon Associate I earn from qualifying purchases.
-          </p>
-          <div className="cards-grid">
-            {featuredFinds.map((item, i) => (
-              <Reveal key={item.title} delay={i * 80}>
-                <FindCard {...item} />
-              </Reveal>
-            ))}
-          </div>
+          <div className="section-heading"><div><span className="eyebrow">PAW NOVA FINDS</span><h2>Useful places to start.</h2></div><Link href="/dog-finds" className="text-link">Browse all 120 finds →</Link></div>
+          <div className="cards-grid">{featured.map(p => <ProductCard key={p.slug} product={p}/>)}</div>
         </div>
       </section>
 
-      <section className="section section-soft">
-        <div className="container narrow center-text">
-          <Reveal>
-            <span className="eyebrow">Our Mission</span>
-            <h2>Good Finds Can Do a Little More.</h2>
-            <p>
-              When Paw Nova earns from qualifying purchases, we set aside a
-              portion of our earnings to help provide food and supplies for
-              dogs in need.
-            </p>
-            <Link href="/gives-back" className="button">
-              Learn About Paw Nova Gives Back
-            </Link>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="section">
+      <section className="section section-soft guides-home">
         <div className="container">
-          <Reveal>
-            <div className="section-heading">
-              <div>
-                <span className="eyebrow">Guides</span>
-                <h2>Helpful reads for dog owners</h2>
-              </div>
-            </div>
-          </Reveal>
-          <div className="guide-grid">
-            {guideTopics.map((topic, i) => (
-              <Reveal key={topic} delay={(i % 3) * 80}>
-                <div className="guide-card">
-                  <span className="pill">Coming soon</span>
-                  <p>{topic}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+          <div className="section-heading section-heading-wide"><div><span className="eyebrow">BUYING GUIDES</span><h2>Know what matters before opening Amazon.</h2></div><p>Our guides are designed to make the shopping decision clearer, not to add another wall of products to scroll through.</p></div>
+          <div className="guide-grid">{guides.slice(0,6).map((g,index)=><article className="guide-card guide-card-editorial" key={g.slug}><span className="guide-index">0{index+1}</span><span className="pill">{g.cluster}</span><h3>{g.title}</h3><p>{g.description}</p><Link href={`/guides/${g.slug}`} className="text-link">Read guide →</Link></article>)}</div>
         </div>
       </section>
 
-      <section className="section section-soft">
-        <div className="container narrow">
-          <Reveal>
-            <h2>How Paw Nova makes money</h2>
-            <div className="info-box">
-              <p>
-                Some links on Paw Nova are Amazon affiliate links. If you buy
-                something through one of them, Paw Nova may earn a small
-                commission — at no additional cost to you. This never
-                changes which products we choose to feature; usefulness
-                comes first. Read the full{" "}
-                <Link href="/affiliate-disclosure">
-                  Affiliate Disclosure
-                </Link>
-                .
-              </p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <Reveal>
-            <div className="cta-panel">
-              <div>
-                <span className="eyebrow">Get started</span>
-                <h2>Start with today's most useful dog finds</h2>
-              </div>
-              <p>
-                Browse curated picks across grooming, play, travel, comfort,
-                feeding, and everyday essentials.
-              </p>
-            </div>
-          </Reveal>
+      <section className="section mission-cta">
+        <div className="container mission-panel">
+          <div><span className="eyebrow">MORE THAN A PRODUCT LIST</span><h2>Better finds for your dog. A growing mission for dogs still waiting for a home.</h2></div>
+          <div><p>As Paw Nova grows, part of what we earn is intended to help provide food and useful supplies to shelters and rescue organizations. We will share real contributions when they happen, without invented impact numbers.</p><Link href="/gives-back" className="button">See Paw Nova Gives Back</Link></div>
         </div>
       </section>
     </>

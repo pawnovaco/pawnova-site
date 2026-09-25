@@ -27,7 +27,7 @@ export default function GivesBackPage() {
             dogs in shelters and rescue organizations.
           </p>
           <p>
-            This isn't a donation program for visitors — you're never asked
+            This isn't a donation program for visitors, you're never asked
             to give anything beyond finding a product that's useful for your
             dog. Paw Nova Gives Back is simply what we plan to do with part
             of what the site earns on its own.
@@ -75,7 +75,7 @@ export default function GivesBackPage() {
               <div className="step-body">
                 <strong>We put it toward food and supplies</strong>
                 <p>
-                  And share the details here — organization, what was
+                  And share the details here, organization, what was
                   provided, and photos where we can.
                 </p>
               </div>
@@ -91,9 +91,9 @@ export default function GivesBackPage() {
             <strong>We haven't logged our first give-back yet.</strong>
             <p>
               Paw Nova is still growing. Once we set aside our first
-              contribution, we'll share it here — including the shelter or
+              contribution, we'll share it here, including the shelter or
               rescue organization, what was donated, and photos where we
-              can. No invented numbers, no placeholder impact stats — just
+              can. No invented numbers, no placeholder impact stats, just
               real updates as they happen.
             </p>
           </div>
@@ -106,7 +106,7 @@ export default function GivesBackPage() {
           <h2>The best way to support this is to shop useful finds</h2>
           <p>
             Every product we feature is chosen because it's genuinely useful
-            for dogs and their owners — that comes first, always.
+            for dogs and their owners, that comes first, always.
           </p>
           <Link href="/dog-finds" className="button">
             Explore Dog Finds

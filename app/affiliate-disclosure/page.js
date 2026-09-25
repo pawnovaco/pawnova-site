@@ -23,7 +23,7 @@ export default function AffiliateDisclosurePage() {
         <p>
           Some links on this site are Amazon affiliate links. If you click
           one of these links and make a qualifying purchase, Paw Nova may
-          earn a small commission — at no additional cost to you.
+          earn a small commission, at no additional cost to you.
         </p>
         <h2>Our editorial approach</h2>
         <p>

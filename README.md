@@ -1,60 +1,34 @@
-# Paw Nova
+# Paw Nova 2026 Rebuild
 
-A Next.js dog-product discovery site for PawNovaCo.com, built on the
-Amazon Associates affiliate model, with a "Paw Nova Gives Back" mission
-layer.
+Next.js 15 affiliate/content site prepared for a 120-item editorial catalog, scalable SEO, and a local-first content command center.
 
-## Structure
+## Included
+- 120 product-type editorial records across six categories
+- Dynamic `/products/[slug]` pages
+- 12 original guide foundations under `/guides/[slug]`
+- Dynamic sitemap including products and guides
+- Organization + Article structured data
+- Canonicals, Open Graph, robots rules, dashboard noindex
+- Amazon disclosure components and safe affiliate-link fields
+- `/dashboard` local-first content workflow: Draft → Review → Approved → Scheduled → Published/Failed
+- Platform variants for Instagram, Facebook, TikTok, Pinterest
+- Security headers and preserved legacy redirects
 
-- `/` — homepage (hero, categories, why Paw Nova, featured finds, Gives
-  Back teaser, guide teasers, trust section, closing CTA)
-- `/dog-finds` — category hub linking to all 6 product categories
-- `/grooming`, `/play-enrichment`, `/walking-travel`, `/beds-comfort`,
-  `/feeding`, `/everyday-essentials` — product category pages
-- `/gives-back` — Paw Nova Gives Back mission page (honest "no impact
-  logged yet" state — update this once a real give-back happens)
-- `/about`, `/contact`, `/affiliate-disclosure`, `/privacy` — standard
-  pages
-- `/sitemap.xml`, `/robots.txt` — generated from `app/sitemap.js` and
-  `app/robots.js`
+## Important before adding Amazon links
+`data/products.json` intentionally leaves `amazonUrl` blank. Add only reviewed Amazon Special Links from your own Associates account. Do not paste copied Amazon ratings, review counts, prices, or downloaded product images unless your use complies with the current Amazon Associates/Creators API rules.
 
-Old URLs `/cat-finds` and `/pet-essentials` 301-redirect (see
-`next.config.mjs`) to `/` and `/everyday-essentials` respectively.
+## Dashboard
+`/dashboard` is a functional local-first MVP using browser localStorage. It does **not** publish to social platforms yet. This is intentional: official Meta, TikTok, and Pinterest credentials/permissions must be configured server-side before distribution is enabled. Do not place API secrets in client-side code or GitHub.
 
-## Run locally
+Recommended production phase: Supabase Auth + database, encrypted server-side token storage, Vercel cron/queue, then official platform connectors.
 
+## Run
 ```bash
 npm install
 npm run dev
 ```
 
-Then open:
-
-http://localhost:3000
-
-## Deploy to Vercel
-
-1. Create a GitHub repository.
-2. Upload all files from this project.
-3. In Vercel, choose **Add New → Project**.
-4. Import the GitHub repository.
-5. Click **Deploy**.
-6. After deployment, add `PawNovaCo.com` under **Project Settings → Domains**.
-
-## Before launch
-
-- Replace placeholder product cards with real product recommendations
-  and live Amazon affiliate links (`components/FindCard.js` buttons are
-  currently disabled placeholders).
-- Add your real contact email (Contact page + Footer).
-- Confirm the Instagram, Facebook, TikTok, and Pinterest links in the
-  footer are correct.
-- Review the Privacy Policy based on the actual tools you use.
-- Keep the Amazon disclosure visible.
-- When Paw Nova logs its first real give-back, replace the empty state
-  on `/gives-back` with real details (organization, date, what was
-  given, photos). Do not add placeholder impact numbers before that.
-
-Amazon disclosure included:
-"As an Amazon Associate I earn from qualifying purchases."
-
+## Build
+```bash
+npm run build
+```

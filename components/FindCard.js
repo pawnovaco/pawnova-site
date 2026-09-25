@@ -9,7 +9,7 @@ export default function FindCard({ title, text, tag }) {
         <h3>{title}</h3>
         <p>{text}</p>
         <button className="button button-secondary" disabled>
-          Check on Amazon — coming soon
+          Check on Amazon, coming soon
         </button>
       </div>
     </article>

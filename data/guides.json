@@ -1,0 +1,133 @@
+[
+  {
+    "slug": "best-dog-products-for-new-puppy-owners",
+    "title": "New Puppy Essentials: What Is Actually Useful?",
+    "cluster": "New Puppy",
+    "description": "A practical starter guide to the gear that earns its place during the first weeks with a puppy.",
+    "relatedCategories": [
+      "everyday-essentials",
+      "feeding",
+      "walking-travel",
+      "play-enrichment"
+    ],
+    "updated": "2026-09-26"
+  },
+  {
+    "slug": "best-dog-harnesses-for-dogs-that-pull",
+    "title": "What to Look for in a Harness for a Dog That Pulls",
+    "cluster": "Walking",
+    "description": "How to compare fit, control points, comfort, and visibility before choosing a walking harness.",
+    "relatedCategories": [
+      "walking-travel"
+    ],
+    "updated": "2026-09-26"
+  },
+  {
+    "slug": "dog-road-trip-essentials",
+    "title": "Dog Road Trip Essentials",
+    "cluster": "Travel",
+    "description": "A simple checklist for safer, cleaner, more comfortable car trips with your dog.",
+    "relatedCategories": [
+      "walking-travel",
+      "everyday-essentials"
+    ],
+    "updated": "2026-09-26"
+  },
+  {
+    "slug": "best-tools-for-dogs-that-shed",
+    "title": "Useful Grooming Tools for Dogs That Shed",
+    "cluster": "Grooming",
+    "description": "How different brush types work and which coat problems they are designed to solve.",
+    "relatedCategories": [
+      "grooming"
+    ],
+    "updated": "2026-09-26"
+  },
+  {
+    "slug": "dog-bath-time-essentials",
+    "title": "Dog Bath Time Essentials",
+    "cluster": "Grooming",
+    "description": "Tools that can make washing, drying, and post-bath cleanup easier.",
+    "relatedCategories": [
+      "grooming",
+      "everyday-essentials"
+    ],
+    "updated": "2026-09-26"
+  },
+  {
+    "slug": "senior-dog-comfort-essentials",
+    "title": "Senior Dog Comfort Essentials",
+    "cluster": "Comfort",
+    "description": "Supportive products to consider for older dogs around rest, feeding, walking, and home life.",
+    "relatedCategories": [
+      "beds-comfort",
+      "feeding",
+      "walking-travel"
+    ],
+    "updated": "2026-09-26"
+  },
+  {
+    "slug": "dog-enrichment-ideas-for-home",
+    "title": "Easy Dog Enrichment Ideas for Home",
+    "cluster": "Enrichment",
+    "description": "Ways to add sniffing, licking, chewing, and problem solving to an ordinary day.",
+    "relatedCategories": [
+      "play-enrichment",
+      "feeding"
+    ],
+    "updated": "2026-09-26"
+  },
+  {
+    "slug": "dog-walking-essentials",
+    "title": "Dog Walking Essentials",
+    "cluster": "Walking",
+    "description": "The basic gear that makes everyday walks easier to manage.",
+    "relatedCategories": [
+      "walking-travel",
+      "everyday-essentials"
+    ],
+    "updated": "2026-09-26"
+  },
+  {
+    "slug": "how-to-choose-a-dog-bed",
+    "title": "How to Choose a Dog Bed",
+    "cluster": "Comfort",
+    "description": "Compare bed shape, support, washability, size, and sleeping style before buying.",
+    "relatedCategories": [
+      "beds-comfort"
+    ],
+    "updated": "2026-09-26"
+  },
+  {
+    "slug": "slow-feeder-vs-puzzle-feeder",
+    "title": "Slow Feeder vs Puzzle Feeder",
+    "cluster": "Feeding",
+    "description": "A practical comparison of two common ways to slow meals and add enrichment.",
+    "relatedCategories": [
+      "feeding",
+      "play-enrichment"
+    ],
+    "updated": "2026-09-26"
+  },
+  {
+    "slug": "dog-travel-water-options",
+    "title": "Dog Travel Water Bottles vs Collapsible Bowls",
+    "cluster": "Travel",
+    "description": "Compare two portable hydration setups for walks, hikes, and road trips.",
+    "relatedCategories": [
+      "walking-travel"
+    ],
+    "updated": "2026-09-26"
+  },
+  {
+    "slug": "pet-hair-cleanup-guide",
+    "title": "A Practical Pet Hair Cleanup Guide",
+    "cluster": "Home",
+    "description": "Tools and routines for managing dog hair on furniture, clothing, and floors.",
+    "relatedCategories": [
+      "everyday-essentials",
+      "grooming"
+    ],
+    "updated": "2026-09-26"
+  }
+]
