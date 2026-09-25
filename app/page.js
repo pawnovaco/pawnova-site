@@ -109,25 +109,31 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="motion-story">
-        <video className="motion-story-video" autoPlay muted loop playsInline preload="metadata" poster="/media/pawnova-dog-cat-home.png">
-          <source src="/media/pawnova-playing-pets.mp4" type="video/mp4" />
-        </video>
-        <div className="motion-story-overlay" />
-        <div className="container motion-story-copy">
-          <span className="eyebrow eyebrow-light">LIFE WITH PETS</span>
-          <h2>Life with pets is messy. Finding the right stuff should not be.</h2>
-          <p>Paw Nova helps narrow the search with practical finds built around how pets actually live, play, travel, eat, and rest.</p>
-          <Link href="/dog-finds" className="button button-light">Explore practical finds</Link>
+      <section className="section motion-feature-section">
+        <div className="container motion-feature">
+          <div className="motion-feature-copy">
+            <span className="eyebrow">LIFE WITH PETS</span>
+            <h2>Life with pets is messy. Finding the right stuff should not be.</h2>
+            <p>Paw Nova helps narrow the search with practical finds built around how pets actually live, play, travel, eat, and rest.</p>
+            <Link href="/dog-finds" className="button">Explore practical finds</Link>
+          </div>
+          <div className="motion-feature-media">
+            <video autoPlay muted loop playsInline preload="metadata" poster="/media/pawnova-dog-cat-home.png">
+              <source src="/media/pawnova-playing-pets.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
       </section>
 
-      <section className="wide-pet-story" style={{backgroundImage: "url('/media/pawnova-dogs-park.png')"}}>
-        <div className="wide-pet-story-overlay" />
-        <div className="container wide-pet-story-copy">
-          <span className="eyebrow eyebrow-light">REAL PET LIFE</span>
-          <h2>Good finds should make more sense in the life you already share with them.</h2>
-          <p>From playtime and walks to quiet afternoons at home, Paw Nova starts with the moment and the need, then helps narrow the products worth considering.</p>
+      <section className="section lifestyle-story-section">
+        <div className="container lifestyle-story">
+          <div className="lifestyle-story-image" style={{backgroundImage: "url('/media/pawnova-dogs-park.png')"}} />
+          <div className="lifestyle-story-copy">
+            <span className="eyebrow">REAL PET LIFE</span>
+            <h2>Good finds should fit the life you already share with them.</h2>
+            <p>From playtime and walks to quiet afternoons at home, Paw Nova starts with the moment and the need, then helps narrow the products worth considering.</p>
+            <Link href="/about" className="text-link">See how we choose finds →</Link>
+          </div>
         </div>
       </section>
 
