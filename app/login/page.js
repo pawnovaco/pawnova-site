@@ -1,10 +1,10 @@
 "use client";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { createClient } from "../../lib/supabase/client";
 
-export default function LoginPage() {
+function LoginContent() {
   const router = useRouter();
   const search = useSearchParams();
   const [email,setEmail]=useState("");
@@ -49,4 +49,19 @@ export default function LoginPage() {
       </form>
     </section>
   </div>;
+}
+
+function LoginFallback() {
+  return <div className="login-shell" aria-busy="true">
+    <section className="login-story">
+      <a href="/" className="login-brand"><Image src="/pawnova-logo.png" width={132} height={92} alt="Paw Nova Co." priority/></a>
+    </section>
+    <section className="login-form-wrap">
+      <div className="login-card"><p>Loading secure sign in...</p></div>
+    </section>
+  </div>;
+}
+
+export default function LoginPage() {
+  return <Suspense fallback={<LoginFallback/>}><LoginContent/></Suspense>;
 }
