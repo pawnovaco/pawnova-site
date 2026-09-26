@@ -1,9 +1,10 @@
 import Link from "next/link";
+import ProductImage from "./ProductImage";
 export default function ProductCard({ product }) {
  return <article className="product-card product-card-real">
    <Link href={`/products/${product.slug}`} className="product-image-link" aria-label={`View ${product.title}`}>
      <div className="product-image-wrap">
-       {product.image ? <img src={product.image} alt={product.title} loading="lazy" /> : <div className="product-image-placeholder">Paw Nova</div>}
+       <ProductImage src={product.image} alt={product.title} />
      </div>
    </Link>
    <div className="product-card-body">

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import AffiliateDisclosure from "../../../components/AffiliateDisclosure";
 import ProductCard from "../../../components/ProductCard";
+import ProductImage from "../../../components/ProductImage";
 import { products, getProduct } from "../../../lib/catalog";
 
 export function generateStaticParams(){ return products.map(p=>({slug:p.slug})); }
@@ -16,7 +17,7 @@ export default async function ProductPage({params}){
  return <>
   <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/>
   <section className="page-hero product-page-hero"><div className="container product-hero-grid">
-   <div className="product-detail-image">{p.image?<img src={p.image} alt={p.title}/>:<div className="product-image-placeholder">Paw Nova</div>}</div>
+   <div className="product-detail-image"><ProductImage src={p.image} alt={p.title} loading="eager" /></div>
    <div><span className="eyebrow">{p.categoryLabel}</span><h1>{p.title}</h1><p>{p.summary}</p><AffiliateDisclosure compact/>
    {p.amazonUrl?<a className="button" href={p.amazonUrl} target="_blank" rel="sponsored nofollow noopener">View on Amazon (paid link)</a>:<span className="listing-pending">Amazon link being verified</span>}
    </div>
