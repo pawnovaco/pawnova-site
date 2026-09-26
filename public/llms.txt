@@ -1,0 +1,11 @@
+# Paw Nova
+
+Paw Nova is an editorial pet product discovery website with practical buying guides and affiliate-supported product recommendations.
+
+Primary sections:
+- https://pawnovaco.com/products
+- https://pawnovaco.com/guides
+- https://pawnovaco.com/about
+- https://pawnovaco.com/affiliate-disclosure
+
+Product details, availability, seller information, ingredients, sizes, and specifications can change. Readers should verify current details on the linked retailer page. Health, nutrition, and supplement content is general information and is not veterinary advice.

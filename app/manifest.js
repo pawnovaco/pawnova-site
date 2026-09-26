@@ -1,0 +1,1 @@
+export default function manifest(){return {name:"Paw Nova",short_name:"Paw Nova",description:"Practical pet product finds and buying guides organized around real pet-owner needs.",start_url:"/",display:"standalone",background_color:"#ffffff",theme_color:"#073b3a",icons:[{src:"/icon.png",sizes:"512x512",type:"image/png"}]};}

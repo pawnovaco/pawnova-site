@@ -42,3 +42,8 @@ Expected Vercel environment variables:
 - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` (preferred) or `NEXT_PUBLIC_SUPABASE_ANON_KEY`
 
 Create the owner login in Supabase Dashboard > Authentication > Users. Do not commit secret/service-role keys or passwords to GitHub.
+
+
+## Deep SEO upload layer
+
+This build adds visible + structured breadcrumbs to individual product and guide pages, improves product-page social metadata, removes the root-level canonical inheritance risk, adds a noindex 404 page, web manifest, and llms.txt, while retaining the dynamic sitemap and robots metadata route. Internal dashboard/API routes remain excluded from crawling.
