@@ -1,3 +1,3 @@
-import Link from "next/link"; import {categoryMap,products} from "../../lib/catalog";
-export const metadata={title:"Dog Product Finds",description:"Browse 120 practical dog product ideas across grooming, walking, travel, feeding, comfort, enrichment, and everyday essentials.",alternates:{canonical:"/dog-finds"}};
-export default function DogFinds(){return <><section className="page-hero"><div className="container narrow"><span className="eyebrow">120-product catalog</span><h1>Dog finds organized around real needs</h1><p>Browse practical product types by the problem they solve. Specific Amazon destinations are added only after Paw Nova verifies the listing.</p></div></section><section className="section"><div className="container category-grid">{Object.entries(categoryMap).map(([slug,c])=><Link href={`/${slug}`} className="category-card" key={slug}><span className="eyebrow">{products.filter(p=>p.category===slug).length} picks</span><h2>{c.label}</h2><p>{c.description}.</p><span className="text-link">Browse category →</span></Link>)}</div></section></>;}
+import { redirect } from "next/navigation";
+export const metadata={title:"Pet Product Finds",description:"Browse Paw Nova pet product finds organized around real needs."};
+export default function DogFinds(){redirect("/products");}

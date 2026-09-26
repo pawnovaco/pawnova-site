@@ -108,8 +108,8 @@ export default function GivesBackPage() {
             Every product we feature is chosen because it's genuinely useful
             for dogs and their owners, that comes first, always.
           </p>
-          <Link href="/dog-finds" className="button">
-            Explore Dog Finds
+          <Link href="/products" className="button">
+            Explore Products
           </Link>
         </div>
       </section>

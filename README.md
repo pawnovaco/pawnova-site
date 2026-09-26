@@ -1,9 +1,9 @@
 # Paw Nova 2026 Rebuild
 
-Next.js 15 affiliate/content site prepared for a 120-item editorial catalog, scalable SEO, and a local-first content command center.
+Next.js 15 affiliate/content site prepared for a scalable editorial product catalog, scalable SEO, and a local-first content command center.
 
 ## Included
-- 120 product-type editorial records across six categories
+- Product discovery catalog organized across practical pet-care categories
 - Dynamic `/products/[slug]` pages
 - 12 original guide foundations under `/guides/[slug]`
 - Dynamic sitemap including products and guides

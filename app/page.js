@@ -4,9 +4,9 @@ import AffiliateDisclosure from "../components/AffiliateDisclosure";
 import { products, guides, categoryMap } from "../lib/catalog";
 
 const proofPoints = [
-  ["120", "curated finds"],
-  ["6", "practical categories"],
-  ["0", "pay-to-rank placements"],
+  ["CURATED", "pet finds"],
+  ["USEFUL", "categories by need"],
+  ["CLEAR", "affiliate disclosure"],
 ];
 
 export default function Home() {
@@ -25,10 +25,10 @@ export default function Home() {
             <span className="eyebrow">INDEPENDENT PET PRODUCT DISCOVERY</span>
             <h1>Better pet finds start with a better reason to recommend them.</h1>
             <p className="hero-text">
-              Paw Nova organizes useful dog products around real needs, not endless storefront clutter. Explore practical shortlists, buying guides, and clear notes that help you narrow the search before you shop.
+              Paw Nova organizes useful pet products around real needs, not endless storefront clutter. Explore practical shortlists, buying guides, and clear notes that help you narrow the search before you shop.
             </p>
             <div className="hero-actions">
-              <Link href="/dog-finds" className="button">Explore Paw Nova Finds</Link>
+              <Link href="/products" className="button">Explore Paw Nova Finds</Link>
               <Link href="/guides" className="button button-ghost">Read the Guides</Link>
             </div>
             <div className="trust-row">
@@ -67,9 +67,9 @@ export default function Home() {
             <p>Good recommendations need context. Choose a category, understand the use case, then explore the products that fit it.</p>
           </div>
           <div className="category-grid category-grid-editorial">
-            {categoryEntries.map(([slug,c], index) => <Link className="category-card category-card-editorial" href={`/${slug}`} key={slug}>
+            {categoryEntries.map(([slug,c], index) => <Link className="category-card category-card-editorial" href={`/products#${slug}`} key={slug}>
               <div className="category-number">0{index + 1}</div>
-              <div><span className="eyebrow">20 CURATED FINDS</span><h3>{c.label}</h3><p>{c.description}.</p></div>
+              <div><span className="eyebrow">{products.filter(p=>p.category===slug).length} FINDS</span><h3>{c.label}</h3><p>{c.description}</p></div>
               <span className="round-arrow" aria-hidden="true">↗</span>
             </Link>)}
           </div>
@@ -97,7 +97,7 @@ export default function Home() {
 
       <section className="section finds-section">
         <div className="container">
-          <div className="section-heading"><div><span className="eyebrow">PAW NOVA FINDS</span><h2>Useful places to start.</h2></div><Link href="/dog-finds" className="text-link">Browse all 120 finds →</Link></div>
+          <div className="section-heading"><div><span className="eyebrow">PAW NOVA FINDS</span><h2>Useful places to start.</h2></div><Link href="/products" className="text-link">Browse all products →</Link></div>
           <div className="cards-grid">{featured.map(p => <ProductCard key={p.slug} product={p}/>)}</div>
         </div>
       </section>
@@ -115,7 +115,7 @@ export default function Home() {
             <span className="eyebrow">LIFE WITH PETS</span>
             <h2>Life with pets is messy. Finding the right stuff should not be.</h2>
             <p>Paw Nova helps narrow the search with practical finds built around how pets actually live, play, travel, eat, and rest.</p>
-            <Link href="/dog-finds" className="button">Explore practical finds</Link>
+            <Link href="/products" className="button">Explore practical finds</Link>
           </div>
           <div className="motion-feature-media">
             <video autoPlay muted loop playsInline preload="metadata" poster="/media/pawnova-dog-cat-home.png">
